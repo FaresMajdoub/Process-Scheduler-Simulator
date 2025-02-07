@@ -1,21 +1,38 @@
-# Process Scheduler Simulator
+# Process-Scheduler-Simulator
 
 ## 📌 Description
-Ce projet est une simulation d'ordonnancement de processus mettant en œuvre plusieurs algorithmes courants utilisés dans les systèmes d'exploitation. Il permet de comparer différentes stratégies d'ordonnancement et d'analyser leur impact sur les performances du système.
-
-## 🚀 Fonctionnalités
-- Implémentation de plusieurs algorithmes d'ordonnancement :
-  - **FCFS (First Come First Served)**
-  - **SJF (Shortest Job First)**
-  - **Round Robin (RR)**
-  - **Ordonnancement par Priorité**
-  - **Ordonnancement Multiniveau**
-- Chargement de scénarios de simulation depuis des fichiers texte.
-- Affichage des résultats de simulation sous forme de **diagrammes de Gantt**.
-- Analyse des performances via :
-  - Temps de réponse
-  - Temps d’attente moyen
-  - Capacité de traitement
+Simulation d'ordonnancement de processus implémentant plusieurs algorithmes :  
+- **FCFS (First Come First Served)**  
+- **SJF (Shortest Job First)**  
+- **Round Robin (RR)**  
+- **Ordonnancement par Priorité**  
+- **Ordonnancement Multiniveau**  
 
 ## 🏗️ Structure du projet
-Le projet est organisé en plusieurs modules :
+```
+📂 **src/** - Fichiers sources  
+  ├── `Processus.h` / `Processus.cpp` (Gestion des processus)  
+  ├── `Ordonnanceur.h` / `Ordonnanceur.cpp` (Algorithmes)  
+  ├── `simulateur.cpp` (Programme principal)  
+  ├── `scenarios/` (Fichiers de tests)  
+  └── `CMakeLists.txt` (Compilation)  
+```
+
+
+## 📊 Exemples
+### ⚡ FCFS
+```plaintext
+P1 (24ms) → P2 (3ms) → P3 (3ms)
+Temps d'attente moyen : 17ms
+```
+### ⚡ Round Robin (Quantum = 4ms)
+```plaintext
+P1 (4ms) → P2 (3ms) → P3 (3ms) → P1 (20ms)
+Temps d'attente moyen : 4.25ms
+```
+
+## ✍️ Auteurs
+**Fares Majdoub** - Université Laval, GLO-2100/IFT-2008  
+
+## 📜 Licence
+Sous licence **MIT**.
